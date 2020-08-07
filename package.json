@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/nlemast/nlemast/issues"
   },
-  "homepage": "https://github.com/nlemast/nlemast#readme"
+  "homepage": "https://github.com/nlemast/nlemast#readme",
+  "dependencies": {
+    "gatsby": "^2.24.36",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
 }
