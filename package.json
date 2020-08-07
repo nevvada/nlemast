@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/nlemast/nlemast#readme",
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/react": "^1.6.16",
     "gatsby": "^2.24.36",
+    "gatsby-plugin-mdx": "^1.2.34",
+    "gatsby-plugin-typescript": "^2.4.17",
+    "gatsby-source-filesystem": "^2.3.24",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.7"
