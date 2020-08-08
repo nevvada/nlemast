@@ -3,6 +3,7 @@ module.exports = {
         title: `nathan le master`,
     },
     plugins: [
+        `gatsby-plugin-styled-components`,
 		`gatsby-plugin-typescript`,
         {
             resolve: `gatsby-plugin-mdx`,

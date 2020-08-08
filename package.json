@@ -2,16 +2,19 @@
   "name": "nlemast",
   "version": "1.0.0",
   "description": "<!-- **nlemast/nlemast** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --pretty --noEmit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nlemast/nlemast.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nathan le master"
+  ],
+  "author": "Nathan Le Master",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nlemast/nlemast/issues"
@@ -20,15 +23,19 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.36",
     "gatsby-plugin-mdx": "^1.2.34",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-plugin-typescript": "^2.4.17",
     "gatsby-source-filesystem": "^2.3.24",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
-    "@types/react": "^16.9.44"
+    "@types/react": "^16.9.44",
+    "@types/styled-components": "^5.1.2"
   }
 }
