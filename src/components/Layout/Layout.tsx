@@ -1,11 +1,14 @@
 import React from 'react';
 
+import Header from '../Header/Header';
+
 import { StyledGlobal } from './styles';
 
 const Layout = ({ children }) => {
     return (
         <>
             <StyledGlobal />
+            <Header />
 
             {children}
 
