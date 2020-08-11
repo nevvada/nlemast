@@ -2,19 +2,21 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
+import PostPreview from '../components/PostPreview/PostPreview';
+import PostPreviewContainer from '../components/PostPreviewContainer/PostPreviewContainer';
 
 const renderPosts = (data) => {
     return data.allMdx.nodes.map((node) => {
-        const { id, excerpt, fields, frontmatter } = node;
+        const { id, fields, frontmatter } = node;
 
         return (
-            <div key={id}>
+            <PostPreview key={id}>
                 <Link to={fields.slug}>
                     <h1>{frontmatter.title}</h1>
-                    <p>{frontmatter.date}</p>
-                    <p>{excerpt}</p>
+                    <h6>{frontmatter.date}</h6>
+                    <p>{frontmatter.summary}</p>
                 </Link>
-            </div>
+            </PostPreview>
         );
     });
 };
@@ -23,8 +25,9 @@ const Blog = ({ data }) => {
     return (
         <>
             <Layout>
-				<h1>my blog?</h1>
-				{renderPosts(data)}
+                <PostPreviewContainer>
+                    {renderPosts(data)}
+                </PostPreviewContainer>
             </Layout>
         </>
     );
@@ -35,15 +38,16 @@ export const query = graphql`
         allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
             nodes {
                 id
-				excerpt(pruneLength: 200)
-				fields {
-					slug
-				}
-				frontmatter {
-					date
-					title
-				}
-			}
+                excerpt(pruneLength: 200)
+                fields {
+                    slug
+                }
+                frontmatter {
+                    date
+                    summary
+                    title
+                }
+            }
         }
     }
 `;
