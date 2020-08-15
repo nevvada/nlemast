@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledBlogPost = styled.article`
-	margin: 0 25%;
+	max-width: 39rem;
+	margin: 0 auto;
 `;

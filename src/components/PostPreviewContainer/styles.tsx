@@ -8,5 +8,6 @@ export const StyledTitle = styled.h1`
 export const StyledMain = styled.main`
 	display: flex;
 	flex-direction: column;
-	margin: 0 25%;
+	margin: 0 auto;
+	width: 39rem;
 `;
