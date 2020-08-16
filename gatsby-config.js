@@ -4,7 +4,7 @@ const siteMetadata = {
     siteLanguage: `en-US`,
     siteLocale: `en_us`,
     siteUrl: `nlemast.me`,
-    title: `nathan le master`,
+    title: `Nathan Le Master's Personal Site`,
 };
 
 module.exports = {
