@@ -13,8 +13,7 @@ const renderPosts = (data) => {
             <PostPreview key={id}>
                 <Link to={fields.slug}>
                     <h1>{frontmatter.title}</h1>
-                    <h6>{frontmatter.date}</h6>
-                    <p>{frontmatter.summary}</p>
+                    <h3>{frontmatter.date}</h3>
                 </Link>
             </PostPreview>
         );
@@ -43,7 +42,7 @@ export const query = graphql`
                     slug
                 }
                 frontmatter {
-                    date
+                    date(formatString: "YYYY MMMM Do")
                     summary
                     title
                 }
