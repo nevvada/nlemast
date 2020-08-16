@@ -4,7 +4,7 @@ date: 2020-07-11
 ---
 
 Ah, files. We do so much with them. And Javascript has a pretty unique way of working with them directly in the browser.
-For starters, we can use the File.File() API to create a file.
+For starters, we can use the `File.File()` API to create a file.
 
 ```
 new File(fileParts, fileName, options?);
@@ -23,7 +23,7 @@ const myFile = new File(['I am hungry.'], 'myBiography.txt', {
 });
 ```
 
-Logging out myFile will show an object with readonly properties like this:
+Logging out `myFile` will show an object with readonly properties like this:
 
 ```
 {
@@ -58,11 +58,10 @@ fileInput.addEventListener('change', (event) => {
 
 Inside the `event.target`, you can access a files property, which is an array of Files. Because this input only allows one file upload at a time—unlike a drag and drop—there will only be a single item in the array.
  
-Here’s a JSFiddle of the above example. Try console logging out the file to see what it looks like!
- 
-[link to JSFiddle](https://jsfiddle.net/nlemast/tphw249b/18/)
+[Here’s a JSFiddle](https://jsfiddle.net/nlemast/tphw249b/18/) of the above example. Try console logging out the file to see what it looks like!
 
-But a File is just that, a simple file. Its properties are readonly, and there are no native methods that allow us to manipulate it. So in order to read its contents, we must use theFileReader API. So going back to our code sample, let's try instantiating a FileReader and invoking its readAsText method like such:
+
+But a `File` is just that, a simple file. Its properties are readonly, and there are no native methods that allow us to manipulate it. So in order to read its contents, we must use theFileReader API. So going back to our code sample, let's try instantiating a FileReader and invoking its readAsText method like such:
 
 ```
 fileInput.addEventListener('change', (event) = {
@@ -78,7 +77,7 @@ fileInput.addEventListener('change', (event) = {
 });
 ```
 
-This works great if it’s a .txt file, but what about images? For this, we can use the FileReader API’s readAsDataURL method. This method reads our File as binary data and encodes it as a URL in base64, giving us a URL string we can add as an image src. Now, if we wanted to append an image to our HTML, we can create an img tag and simply assign its src to the dataURL.
+This works great if it’s a `.txt` file, but what about images? For this, we can use the FileReader API’s `readAsDataURL` method. This method reads our File as binary data and encodes it as a URL in base64, giving us a URL string we can add as an image src. Now, if we wanted to append an image to our HTML, we can create an img tag and simply assign its src to the dataURL.
 
 ```
 fileInput.addEventListener('change', (event) = {
@@ -100,5 +99,4 @@ fileInput.addEventListener('change', (event) = {
 });
 ```
 
-Here’s a link to an example!
-[link to JSFiddle](https://jsfiddle.net/nlemast/3t6zrkhf/10/)
+[Here’s a link to an example!](https://jsfiddle.net/nlemast/3t6zrkhf/10/)
