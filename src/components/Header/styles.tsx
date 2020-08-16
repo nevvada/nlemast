@@ -14,5 +14,10 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledTitle = styled.h1`
-	font-size: 3em;
+    font-size: 3em;
+    
+    & > a {
+        color: black;
+        text-decoration: none;
+    }
 `;
