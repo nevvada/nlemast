@@ -2,10 +2,15 @@ import styled from 'styled-components';
 
 export const StyledPost = styled.article`
 	border-radius: 1em;
-	min-height: 110px;
+	display: flex;
+    flex-flow: column;
+    justify-content: center;
+	min-height: 2em;
 	padding: 1em;
 
 	> * > * {
+		align-items: center;
+		display: flex;
 		padding: 0.1em 0;
 	}
 

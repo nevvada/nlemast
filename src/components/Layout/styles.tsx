@@ -5,7 +5,7 @@ export const StyledGlobal = createGlobalStyle`
 		background-color: #eee8d5;
         box-sizing: border-box;
 		font-family: 'Quicksand', sans-serif;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     *,
@@ -30,7 +30,7 @@ export const StyledGlobal = createGlobalStyle`
     }
 
     a {
-        color: black;
-        text-decoration: none;
+        color: #483D8B;
+        font-weight: 900;
     }
 `;
