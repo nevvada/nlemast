@@ -4,7 +4,8 @@ import React from 'react';
 import Code from './src/components/Code/Code';
 
 const components = {
-	p: props => (<p {...props} style={{margin: '1rem 0'}}/>),
+	a: props => <a {...props} target="_blank"/>,
+	p: props => (<p {...props} style={{margin: '2em 0'}}/>),
 	'p.inlineCode': props => (
 		<code style={{ backgroundColor: 'lightgray' }} {...props} />
 	),
