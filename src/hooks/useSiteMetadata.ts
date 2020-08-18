@@ -8,8 +8,6 @@ const useSiteMetadata = () => {
                     siteMetadata {
                         description,
                         siteLanguage,
-                        siteLocale,
-                        siteUrl,
                         title
                     }
                 }

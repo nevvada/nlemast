@@ -2,8 +2,6 @@ const siteMetadata = {
     authorName: `Nathan Le Master`,
     description: `This is my personal site where I write about coding, things, and stuff.`,
     siteLanguage: `en-US`,
-    siteLocale: `en_us`,
-    siteUrl: `nlemast.me`,
     title: `Nathan Le Master's Personal Site`,
 };
 
