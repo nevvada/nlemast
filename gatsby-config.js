@@ -1,7 +1,12 @@
+const siteMetadata = {
+    authorName: `Nathan Le Master`,
+    description: `This is my personal site where I write about coding, things, and stuff.`,
+    siteLanguage: `en-US`,
+    title: `Nathan Le Master's Personal Site`,
+};
+
 module.exports = {
-    siteMetadata: {
-        title: `nathan le master`,
-    },
+    siteMetadata,
     plugins: [
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
