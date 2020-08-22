@@ -2,7 +2,7 @@ const siteMetadata = {
     authorName: `Nathan Le Master`,
     description: `This is my personal site where I write about coding, things, and stuff.`,
     siteLanguage: `en-US`,
-    title: `Nathan Le Master's Personal Site`,
+    title: `nlemast`,
 };
 
 module.exports = {
@@ -12,6 +12,17 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-typescript`,
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                start_url: '/',
+                background_color: '#fff',
+                theme_color: '#000',
+                display: 'standalone',
+                icon: 'src/images/SquareFavicon.png',
+                crossOrigin: `use-credentials`,
+            },
+        },
         {
             resolve: `gatsby-plugin-mdx`,
             options: {
