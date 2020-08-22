@@ -4,7 +4,9 @@
   "description": "<!-- **nlemast/nlemast** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
   "main": "index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop -p 8000 -o",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 8080 -o",
     "type-check": "tsc --pretty --noEmit"
   },
   "repository": {
