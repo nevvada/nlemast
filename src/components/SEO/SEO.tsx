@@ -1,15 +1,11 @@
 import { Helmet } from 'react-helmet';
 import React from 'react';
 
-import useSiteMetadata from '../../hooks/useSiteMetadata';
-
-const SEO = () => {
-	const {
-		description = '',
-		siteLanguage = '',
-		title = '',
-	} = useSiteMetadata();
-
+const SEO = ({
+	description,
+	siteLanguage,
+	title,
+}) => {
     return (
         <>
             <Helmet
