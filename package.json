@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gatsby develop -p 8000 -o",
     "build": "gatsby build",
-    "serve": "gatsby serve -p 8080 -o",
+    "serve": "gatsby serve -p 9000 -o",
     "type-check": "tsc --pretty --noEmit"
   },
   "repository": {
