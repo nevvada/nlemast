@@ -43,7 +43,6 @@ export const query = graphql`
                 }
                 frontmatter {
                     date(formatString: "YYYY MMMM Do")
-                    summary
                     title
                 }
             }
