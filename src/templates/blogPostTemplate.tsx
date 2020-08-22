@@ -11,14 +11,14 @@ import useSiteMetadata from '../hooks/useSiteMetadata';
 
 const BlogPostTemplate = ({ data }) => {
     const { body, excerpt, frontmatter } = data.mdx;
-    const { siteLanguage = '' } = useSiteMetadata();
+    const { siteLanguage = '', title = '' } = useSiteMetadata();
 
     return (
         <Layout>
             <SEO
                 description={excerpt}
                 siteLanguage={siteLanguage}
-                title={frontmatter.title}
+                title={title}
             />
             <StyledBlogPost>
                 <StyledTitle>{frontmatter.title}</StyledTitle>

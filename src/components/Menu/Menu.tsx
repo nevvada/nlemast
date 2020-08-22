@@ -14,12 +14,14 @@ const Menu = () => {
                 <StyledLogoWrapper>
                     <a
                         href="https://github.com/nlemast"
-                        style={{ display: 'inline-block' }}
                         target="_blank"
                     >
                         <StyledIcon href="https://github.com/nlemast" src={GithubLogo} />
                     </a>
-                    <a href="https://www.linkedin.com/in/nathan-le-master/">
+                    <a
+                        href="https://www.linkedin.com/in/nathan-le-master/"
+                        target="_blank"
+                    >
                         <StyledIcon src={LinkedInLogo} />
                     </a>
                     <Link to="/blog">
