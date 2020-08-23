@@ -21,27 +21,27 @@ In a Caresian coordinate system, positive x and y coordinates are in the top-rig
 
 Conversely, with CSS, positive x & y values are found in the bottom right. It's essentially an upside down Cartesian axis.
 
-![xy_axes](./xy_axes.png)
+![xy_axes](./images/xy_axes.png)
 
-With the box-shadow CSS property, the first two values are the x and y coordinate. So adding 5px and 5px will look something like this.
+Now when using the box-shadow CSS property, the first two values are the x and y coordinates (horizontal & vertical offsets). So adding `5px` and `5px` will look something like this:
 
-![box_shadow_basic](./box_shadow_basic.png)
+![box_shadow_basic](./images/box_shadow_basic.png)
 
 If the top div was translucent, it would like so:
 
-![box_shadow_basic](./box_shadow_basic)
+![box_shadow_basic](./images/box_shadow_basic.png)
 
 But if you wanted to move the box shadow much further away, you'd have to add x and y coordinates greater than the width and height of the origin element, like so:
 
-![box_shadow_away](./box_shadow_away)
+![box_shadow_away](./images/box_shadow_away.png)
 
 So how would would we accomplish this with circular divs? Easy! Same as with a square.
 
-![box_shadow_circle](./box_shadow_circle)
+![box_shadow_circle](./images/box_shadow_circle.png)
 
 The cool thing about box shadow, is that you can have multiple shadows. Following the above example, if we wanted 8 total box shadows on our, it's just a matter of finding the appropriate x and y coordinates for each one.
 
-![box_shadow_circles](./box_shadow_circles)
+![box_shadow_circles](./images/box_shadow_circles.png)
 
 Now let's get started with our animation!
 
