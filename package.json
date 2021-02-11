@@ -4,9 +4,9 @@
   "description": "<!-- **nlemast/nlemast** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
   "main": "index.tsx",
   "scripts": {
-    "dev": "gatsby develop -p 8000 -o",
-    "build": "gatsby build",
-    "serve": "gatsby serve -p 9000 -o",
+    "dev": "",
+    "build": "",
+    "serve": "",
     "type-check": "tsc --pretty --noEmit"
   },
   "repository": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/nlemast/nlemast#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "webpack": "^5.21.2"
   },
   "devDependencies": {
