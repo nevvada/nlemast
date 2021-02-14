@@ -9,7 +9,7 @@ module.exports = {
   // target: 'node',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'dist/bundle.js',
     publicPath: '/',
   },
   module: {
@@ -21,10 +21,7 @@ module.exports = {
       {
         exclude: /node_modules/,
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-        },
+        use: 'babel-loader',
       },
       {
         exclude: /node_modules/,
@@ -38,9 +35,17 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'src'),
+    compress: true,
     port: 8000,
-    publicPath: '/dist',
+    publicPath: '/',
     hot: true,
     historyApiFallback: true, // for react router
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: './index.html',
+      inject: true,
+      template: './src/index.html',
+    })
+  ]
 };
