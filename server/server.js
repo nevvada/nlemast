@@ -3,18 +3,19 @@ const path = require('path');
 
 const app = express();
 
+const DIST_DIR = path.join(__dirname, '../dist');
+const HTML_FILE = path.join(DIST_DIR, 'index.html');
+const PORT = 3000;
+
 app.use('./dist', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/bundle.js'));
 });
 
-app.get('/', (req, res) => {
-  res
-    .status(200)
-    .type('html')
-    .sendFile(path.join(__dirname), '../src/index.html');
-});
+app.use(express.static(DIST_DIR));
 
-const PORT = 3000;
+app.get('/', (req, res) => {
+  res.sendFile(HTML_FILE);
+});
 
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}...`);
