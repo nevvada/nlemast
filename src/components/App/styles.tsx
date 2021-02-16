@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const StyledGlobal = createGlobalStyle`
   html {
@@ -24,13 +24,20 @@ export const StyledGlobal = createGlobalStyle`
   p,
   ol,
   ul {
-      font-weight: normal;
-      margin: 0;
-      padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
   }
 
   a {
-      color: #483D8B;
-      font-weight: 900;
+    color: #000;
+    font-weight: 900;
+    text-decoration: none;
   }
+`;
+
+export const StyledMain = styled.main`
+  max-width: 39em;
+  margin: 0 auto;
 `;
