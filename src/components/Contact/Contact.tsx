@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Contact: React.FC = () => {
-  return (
-    <>
-      Contact Info
-    </>
-  )
-};
+import Header from '../Header/Header';
+
+const Contact: React.FC = () => (
+  <>
+    <Header />
+    Contact Info
+  </>
+);
 
 export default Contact;
