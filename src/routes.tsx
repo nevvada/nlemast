@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 import ProgrammingBlog from './components/CodingBlog/CodingBlog';
 import RandomStuffBlog from './components/ScribblesBlog/ScribblesBlog';
 
@@ -15,8 +15,8 @@ const routes = [
     path: '/scribbles',
   },
   {
-    component: Contact,
-    path: '/contact',
+    component: About,
+    path: '/about',
   },
 ];
 
