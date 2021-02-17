@@ -1,17 +1,16 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const StyledGlobal = createGlobalStyle`
-  html {
-	background-color: #F7F7FF;
-  box-sizing: border-box;
-	font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+  body {
+    background-color: #F7F7FF;
   }
 
   *,
   *:before,
   *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   body,
@@ -25,9 +24,6 @@ export const StyledGlobal = createGlobalStyle`
   ol,
   ul {
     font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
   }
 
   a {
@@ -38,6 +34,24 @@ export const StyledGlobal = createGlobalStyle`
 `;
 
 export const StyledMain = styled.main`
-  max-width: 39em;
   margin: 0 auto;
+`;
+
+export const StyledArticle = styled.article`
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 39em;
+`;
+
+export const StyledDiv = styled.div`
+  border-left: 50em solid transparent;
+  border-right: 50em solid transparent;
+  border-top: 50em solid rgba(0, 0, 0, 0.05);
+  height: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 0;
+  z-index: -1;
 `;

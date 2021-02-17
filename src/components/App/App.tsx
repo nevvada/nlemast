@@ -4,18 +4,21 @@ import { renderRoutes } from '../../routes';
 
 import Home from '../Home/Home';
 
-import { StyledGlobal, StyledMain } from './styles';
+import { StyledArticle, StyledDiv, StyledGlobal, StyledMain } from './styles';
 
 const App: React.FC = () => (
-  <StyledMain>
+  <>
     <StyledGlobal />
-    <Router>
-      <Home />
-      <Switch>
-        {renderRoutes()}
-      </Switch>
-    </Router>
-  </StyledMain>
+    <StyledMain>
+      <StyledDiv />
+      <Router>
+        <Home />
+        <StyledArticle>
+          <Switch>{renderRoutes()}</Switch>
+        </StyledArticle>
+      </Router>
+    </StyledMain>
+  </>
 );
 
 export default App;
