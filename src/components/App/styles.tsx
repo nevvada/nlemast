@@ -37,7 +37,7 @@ export const StyledMain = styled.main`
   margin: 0 auto;
 `;
 
-export const StyledArticle = styled.article`
+export const StyledSection = styled.section`
   line-height: 1.5em;
   margin: 0 auto;
   max-width: 39em;

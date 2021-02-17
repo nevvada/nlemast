@@ -4,7 +4,7 @@ import { renderRoutes } from '../../routes';
 
 import Home from '../Home/Home';
 
-import { StyledArticle, StyledDiv, StyledGlobal, StyledMain } from './styles';
+import { StyledSection, StyledDiv, StyledGlobal, StyledMain } from './styles';
 
 const App: React.FC = () => (
   <>
@@ -13,9 +13,9 @@ const App: React.FC = () => (
       <StyledDiv />
       <Router>
         <Home />
-        <StyledArticle>
+        <StyledSection>
           <Switch>{renderRoutes()}</Switch>
-        </StyledArticle>
+        </StyledSection>
       </Router>
     </StyledMain>
   </>

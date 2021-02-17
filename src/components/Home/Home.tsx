@@ -12,7 +12,7 @@ const Home: React.FC = () => (
     {/* <img alt="linkedin logo" src={LinkedInLogo} /> */}
     <StyledHeader>
       <StyledH1><Link to="/">nathan le master</Link></StyledH1>
-      <StyledH2>software engineer, writer, very online person</StyledH2>
+      <StyledH2>software engineer &middot; writer &middot; very online person</StyledH2>
       <hr></hr>
       <StyledNav>
         <Link to="/about">about</Link>
