@@ -2,8 +2,7 @@ import React from 'react';
 import { Route, RouteProps } from 'react-router-dom';
 
 import About from './components/About/About';
-import ProgrammingBlog from './components/CodingBlog/CodingBlog';
-import RandomStuffBlog from './components/Blog/Blog';
+import Blog from './components/Blog/Blog';
 import BlogPost from './components/BlogPost/BlogPost';
 
 const routes: RouteProps[] = [
@@ -12,7 +11,7 @@ const routes: RouteProps[] = [
     path: '/coding-stuff/:date'
   },
   {
-    component: ProgrammingBlog,
+    component: Blog,
     path: '/coding-stuff',
   },
   {
@@ -20,7 +19,7 @@ const routes: RouteProps[] = [
     path: '/scribbles/:date'
   },
   {
-    component: RandomStuffBlog,
+    component: Blog,
     path: '/scribbles',
   },
   {
