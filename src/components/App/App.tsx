@@ -1,32 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { renderRoutes } from '../../routes';
 
-import Contact from '../Contact/Contact';
 import Home from '../Home/Home';
-import ProgrammingBlog from '../ProgrammingBlog/ProgrammingBlox';
-import RandomStuffBlog from '../RandomStuffBlog/RandomStuffBlog';
 
-import { StyledGlobal } from './styles';
+import { StyledArticle, StyledDiv, StyledGlobal, StyledMain } from './styles';
 
 const App: React.FC = () => (
   <>
     <StyledGlobal />
-    <Router>
-      <Switch>
-        <Route path="/codingStuff">
-          <ProgrammingBlog />
-        </Route>
-        <Route path="/randomStuff">
-          <RandomStuffBlog />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <StyledMain>
+      <StyledDiv />
+      <Router>
+        <Home />
+        <StyledArticle>
+          <Switch>{renderRoutes()}</Switch>
+        </StyledArticle>
+      </Router>
+    </StyledMain>
   </>
 );
 
