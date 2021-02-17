@@ -46,7 +46,7 @@ export const StyledArticle = styled.article`
 export const StyledDiv = styled.div`
   border-left: 50em solid transparent;
   border-right: 50em solid transparent;
-  border-top: 50em solid rgba(0, 0, 0, 0.05);
+  border-top: 50em solid rgba(0, 0, 0, 0.02);
   height: 0;
   left: 0;
   margin: auto;
