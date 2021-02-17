@@ -2,20 +2,19 @@ import Markdown from 'markdown-to-jsx';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-type Props = Post;
+import { StyledArticle, StyledH4 } from './styles';
 
-const ScribblesBlogPost: React.FC = (props) => {
-  const { state = {} } = useLocation();
-  const { date, markdown, title } = state as Post;
-
-  console.log('markdown', props)
+const ScribblesBlogPost: React.FC = () => {
+  const { state } = useLocation<Post>();
+  const { date, markdown, title } = state;
 
   return (
     <>
       <h1>{title}</h1>
-      <div>
+      <StyledArticle>
+        <StyledH4>{date}</StyledH4>
         <Markdown>{markdown}</Markdown>
-      </div>
+      </StyledArticle>
     </>
   );
 };

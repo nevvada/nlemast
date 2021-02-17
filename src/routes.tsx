@@ -1,18 +1,18 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, RouteProps } from 'react-router-dom';
 
 import About from './components/About/About';
 import ProgrammingBlog from './components/CodingBlog/CodingBlog';
 import RandomStuffBlog from './components/ScribblesBlog/ScribblesBlog';
 import ScribblesBlogPost from './components/ScribblesBlogPost/ScribblesBlogPost';
 
-const routes = [
+const routes: RouteProps[] = [
   {
     component: ProgrammingBlog,
     path: '/coding-stuff',
   },
   {
-    component: ScribblesBlogPost,
+    render: () => <ScribblesBlogPost />,
     path: '/scribbles/:date'
   },
   {

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ScribblesBlogPreview from '../ScribblesBlog/ScribblesBlogPreview';
+import ScribblesBlogPreview from '../ScribblesBlogPreview/ScribblesBlogPreview';
 
 import posts from '../../scribblesPosts/posts';
 
 const ScribblesBlog: React.FC = () => {
-  const renderedPosts =  posts.map(post => {
-    return <ScribblesBlogPreview {...post} />
+  const renderedPosts =  posts.map((post, index) => {
+    return <ScribblesBlogPreview {...post} key={index} />
   })
 
   return (
