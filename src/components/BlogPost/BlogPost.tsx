@@ -2,6 +2,8 @@ import Markdown from 'markdown-to-jsx';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
+import Image from '../Image/Image';
+
 import { StyledArticle, StyledH4 } from './styles';
 
 const BlogPost: React.FC = () => {
@@ -13,7 +15,17 @@ const BlogPost: React.FC = () => {
       <h1>{title}</h1>
       <StyledArticle>
         <StyledH4>{date}</StyledH4>
-        <Markdown>{markdown}</Markdown>
+        <Markdown
+          options={{
+            overrides: {
+              img: {
+                component: Image,
+              },
+            },
+          }}
+        >
+          {markdown}
+        </Markdown>
       </StyledArticle>
     </>
   );
