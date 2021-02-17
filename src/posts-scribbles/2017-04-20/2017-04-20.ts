@@ -2,7 +2,7 @@ const post = {
   date: '2017-04-20',
   title: 'Inside the World of Tulpas, aka Imaginary Friends for Adults',
   markdown: `
-![adventure time gif](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613596069/nlemast/adventure-time_mlxxnw.gif)
+![adventure time gif](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613599166/nlemast/scribbles/2017-04-20/adventure-time_gofwa2.gif)
 <br><br>
 **Direct experience is an evasion, or hiding place, for those without any imagination.**
 <br>

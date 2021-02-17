@@ -23,7 +23,7 @@ foothold in Asia, as well as wet her feet in the colonial game played by all sig
 European powers, naturally assumed that the defeat of Spain meant the seamless transfer of
 authority into her hands. And so began the Philippine-American War.
 <br><br>
-![life magazine cover](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613595601/nlemast/life-cover_kmtwpt.jpg)
+![life magazine cover](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613599128/nlemast/scribbles/2016-09-11/life-cover_s9egti.jpg)
 <br><br>
 This war on the Filipino
 archipelago can best be described as a proto-Vietnam. With military superiority, the Americans
