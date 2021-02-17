@@ -44,13 +44,13 @@ export const StyledSection = styled.section`
 `;
 
 export const StyledDiv = styled.div`
-  border-left: 50em solid transparent;
-  border-right: 50em solid transparent;
-  border-top: 50em solid rgba(0, 0, 0, 0.02);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 50vw solid rgba(0, 0, 0, 0.02);
   height: 0;
   left: 0;
   margin: auto;
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 0;
   z-index: -1;
