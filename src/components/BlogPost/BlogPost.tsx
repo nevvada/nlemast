@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import { StyledArticle, StyledH4 } from './styles';
 
-const ScribblesBlogPost: React.FC = () => {
+const BlogPost: React.FC = () => {
   const { state } = useLocation<Post>();
   const { date, markdown, title } = state;
 
@@ -19,4 +19,4 @@ const ScribblesBlogPost: React.FC = () => {
   );
 };
 
-export default ScribblesBlogPost;
+export default BlogPost;

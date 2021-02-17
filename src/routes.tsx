@@ -3,16 +3,20 @@ import { Route, RouteProps } from 'react-router-dom';
 
 import About from './components/About/About';
 import ProgrammingBlog from './components/CodingBlog/CodingBlog';
-import RandomStuffBlog from './components/ScribblesBlog/ScribblesBlog';
-import ScribblesBlogPost from './components/ScribblesBlogPost/ScribblesBlogPost';
+import RandomStuffBlog from './components/Blog/Blog';
+import BlogPost from './components/BlogPost/BlogPost';
 
 const routes: RouteProps[] = [
+  {
+    render: () => <BlogPost />,
+    path: '/coding-stuff/:date'
+  },
   {
     component: ProgrammingBlog,
     path: '/coding-stuff',
   },
   {
-    render: () => <ScribblesBlogPost />,
+    render: () => <BlogPost />,
     path: '/scribbles/:date'
   },
   {
