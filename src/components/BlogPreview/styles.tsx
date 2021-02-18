@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledArticle = styled.article`
+export const StyledLi = styled.li`
   font-size: 1.5em;
   padding: 1em;
   text-decoration: underline;
