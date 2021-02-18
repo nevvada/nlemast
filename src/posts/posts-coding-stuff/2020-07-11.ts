@@ -2,7 +2,7 @@ const post = {
   date: '2020-07-11',
   title: 'On Files and File Readers',
   markdown: `
-Ah, files. We do so much with them. And Javascript has a pretty unique way of working with them directly in the browser. For starters, we can use the File.File() API to create a file.
+Ah, files. We do so much with them. And Javascript has a pretty unique way of working with them directly in the browser. For starters, we can use the \`File.File()\` API to create a file.
 <br><br>
 
 \`\`\`js
@@ -13,9 +13,9 @@ Ah, files. We do so much with them. And Javascript has a pretty unique way of wo
 The constructor accepts three arguments:
 <br><br>
 
-1. fileParts: an array of strings, buffer source, or blobs
-2. fileName: file name as a string
-3. options: optional object with properties type (MIME type, like 'text/plain') and lastModified (number timestamp in milliseconds from Unix epoch)
+1. \`fileParts\`: an array of strings, buffer source, or blobs
+2. \`fileName\`: file name as a string
+3. \`options\`: optional object with properties type (MIME type, like 'text/plain') and lastModified (number timestamp in milliseconds from Unix epoch)
 
 <br><br>
 An example would look like so:
@@ -69,11 +69,11 @@ And in our Javascript:
 \`\`\`
 
 <br><br>
-Inside the event.target, you can access a files property, which is an array of Files. Because this input only allows one file upload at a time—unlike a drag and drop—there will only be a single item in the array.
+Inside the \`event.target\`, you can access a files property, which is an array of Files. Because this input only allows one file upload at a time—unlike a drag and drop—there will only be a single item in the array.
 <br><br>
 [Here’s a JSFiddle of the above example](https://jsfiddle.net/nlemast/tphw249b/18/). Try console logging out the file to see what it looks like!
 <br><br>
-But a File is just that, a simple file. Its properties are readonly, and there are no native methods that allow us to manipulate it. So in order to read its contents, we must use theFileReader API. So going back to our code sample, let's try instantiating a FileReader and invoking its readAsText method like such:
+But a \`File\` is just that, a simple file. Its properties are readonly, and there are no native methods that allow us to manipulate it. So in order to read its contents, we must use theFileReader API. So going back to our code sample, let's try instantiating a FileReader and invoking its readAsText method like such:
 <br><br>
 
 \`\`\`js
@@ -91,7 +91,7 @@ But a File is just that, a simple file. Its properties are readonly, and there a
 \`\`\`
 
 <br><br>
-This works great if it’s a .txt file, but what about images? For this, we can use the FileReader API’s readAsDataURL method. This method reads our File as binary data and encodes it as a URL in base64, giving us a URL string we can add as an image src. Now, if we wanted to append an image to our HTML, we can create an img tag and simply assign its src to the dataURL.
+This works great if it’s a \`.txt\` file, but what about images? For this, we can use the FileReader API’s \`readAsDataURL\` method. This method reads our File as binary data and encodes it as a URL in base64, giving us a URL string we can add as an image src. Now, if we wanted to append an image to our HTML, we can create an img tag and simply assign its src to the dataURL.
 <br><br>
 
 \`\`\`js

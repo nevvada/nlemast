@@ -28,7 +28,7 @@ Conversely, with CSS, positive x & y values are found in the bottom right. It's 
 ![axes](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613599377/nlemast/coding/2020-08-22/xy_axes_c2ebrk.png)
 
 <br><br>
-Now when using the box-shadow CSS property, the first two values are the x and y coordinates (horizontal & vertical offsets). So adding 5px and 5px will look something like this:
+Now when using the box-shadow CSS property, the first two values are the x and y coordinates (horizontal & vertical offsets). So adding \`5px\` and \`5px\` will look something like this:
 <br><br>
 
 ![box shadow basic](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613599372/nlemast/coding/2020-08-22/box_shadow_basic_twycs2.png)
@@ -60,7 +60,7 @@ The cool thing about box shadow, is that you can have multiple shadows. Followin
 <br><br>
 Now let's get started with our animation!
 <br><br>
-To begin, we need the starting div, from which all of the box shadows will, uh... shadow. I'm giving it a height and width of 40px, and because it has no background color or border, it'll be inivisble. Also be sure to give it a border-radius: 50% to make sure the box shadows are circular.
+To begin, we need the starting div, from which all of the box shadows will, uh... shadow. I'm giving it a \`height\` and \`width\` of 40px, and because it has no background color or border, it'll be inivisble. Also be sure to give it a \`border-radius: 50%\` to make sure the box shadows are circular.
 <br><br>
 
 \`\`\`css
@@ -91,7 +91,7 @@ Next, we need 8 total colors, representing different shades of gray for each one
 <br><br>
 Keyframes animations work with different states of the animation. To accomplish our goal, we need one state for each box shadow. So our 8 states can cleanly be split up as: 0%, 12.5%, 25%, 37.5%, 50%, 62.5%, 87.5%, and 100%.
 <br><br>
-Beginning with the first state of 0% and final state of 100% (to represent a full loop), we can add a box-shadow like so:
+Beginning with the first state of 0% and final state of 100% (to represent a full loop), we can add a \`box-shadow\` like so:
 <br><br>
 
 \`\`\`css
@@ -104,7 +104,7 @@ Beginning with the first state of 0% and final state of 100% (to represent a ful
 \`\`\`
 
 <br><br>
-This represents the first box shadow, which'll be a white circle 100px north of the original div. Now we want to create 7 more box shadows for this state, each representing a more opaque gradation of the original white. Each circle will be given different x,y coordinates to orbit around the original div.
+This represents the first box shadow, which'll be a white circle \`100px\` north of the original div. Now we want to create 7 more box shadows for this state, each representing a more opaque gradation of the original white. Each circle will be given different x,y coordinates to orbit around the original div.
 <br><br>
 
 \`\`\`css
