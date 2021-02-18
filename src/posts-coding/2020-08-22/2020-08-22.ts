@@ -196,7 +196,7 @@ Add the animation to our div, and voila, we have a spinning spinner.
 <br><br>
 ![loader gif](https://res.cloudinary.com/dwcrpofnt/image/upload/v1613599376/nlemast/coding/2020-08-22/dot-spinner_l4d0ih.gif)
 <br><br>
-[Here's a Fiddle with this example!](#https://jsfiddle.net/nlemast/zrmevyug/23/)
+[Here's a Fiddle with this example!](https://jsfiddle.net/nlemast/zrmevyug/23/)
 `,
 };
 

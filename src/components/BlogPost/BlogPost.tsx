@@ -2,6 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
+import Anchor from '../Anchor/Anchor';
 import Image from '../Image/Image';
 
 import { StyledArticle, StyledH4 } from './styles';
@@ -18,9 +19,8 @@ const BlogPost: React.FC = () => {
         <Markdown
           options={{
             overrides: {
-              img: {
-                component: Image,
-              },
+              a: { component: Anchor },
+              img: { component: Image },
             },
           }}
         >
