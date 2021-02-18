@@ -85,7 +85,7 @@ world that’s haunted with issues of identity (think of the agonizing paradox t
 colonized people are often forced to articulate their struggle for identity through the
 language of their colonizers), formerly colonized countries are weary when others, especially
 their former colonizer, try to impose a moral reproach. Hence why Duterte reminds the world of
-the war that resulted in the death of more than 200,000 dead Filipinos, a war which America
+the war that resulted in the death of more than 200,000 Filipinos, a war which America
 has yet to issue a formal apology. Naturally, when Obama denounces his policies, Duterte
 revives America’s skeletons-in-her-closet, as a way to kick her off her moral high ground. Be
 that as it may, that doesn’t excuse Duterte from criticism by America or the United Nations.

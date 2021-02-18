@@ -21,7 +21,7 @@ term tulpa to signify an imaginary companion, also created solely by willpower�
 context, typically ponies from the TV show. Since the early 2010s, tulpas began to include any
 being, in whatever form, from whatever source, created by a “tulpamancer”.
 <br><br>
-Home to many underground communities, 4chan was one of the first crossroads where tulpamancers could meet
+Unsurprisingly, 4chan was one of the first crossroads where tulpamancers could meet
 and share their ideas. Some members have since migrated to forums, as well as the subreddit
 /r/tulpas, where you’ll discover numerous guides on how to create and nourish your tulpa, as
 well as countless Q&As addressing every single angle.
