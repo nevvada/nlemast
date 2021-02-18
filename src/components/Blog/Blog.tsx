@@ -1,29 +1,30 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
 import BlogPreview from '../BlogPreview/BlogPreview';
 
-import codingPosts from '../../posts-coding/posts';
-import scribblesPosts from '../../posts-scribbles/posts';
+import PostsContext from '../../PostsContext';
 
-const Blog: React.FC = () => {
-  const { pathname } = useLocation();
+interface Props extends RouteComponentProps<Params> {}
 
-  const posts = (pathname === '/coding-stuff') ? codingPosts : scribblesPosts;
+const renderBlogPreviews = (posts: Posts) => (
+  Object.entries(posts).map(([date, post]) => (
+    <BlogPreview {...post} key={date} />
+  ))
+);
 
-  const renderedPosts = posts.map((post, index) => (
-    <BlogPreview
-      {...post}
-      key={index}
-      pathname={pathname}
-    />
-  ));
+const Blog: React.FC<Props> = () => {  
+  const { blogType } = useParams<Params>();
+
+  const allPosts = useContext(PostsContext);
+  const blogTypePosts = allPosts[blogType];
 
   return (
-    <>
-      {renderedPosts}
-    </>
-  )
+    <ul>
+      {renderBlogPreviews(blogTypePosts)}
+    </ul>
+  );
 };
 
 export default Blog;
