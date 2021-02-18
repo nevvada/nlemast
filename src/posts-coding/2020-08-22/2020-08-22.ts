@@ -55,6 +55,7 @@ To begin, we need the starting div, from which all of the box shadows will, uh..
 <br><br>
 Next, we need 8 total colors, representing different shades of gray for each one of our box shadows. Rather than rewriting this for every box-shadow, I accomplished this by simply creating CSS variables of different colors, with the primary color being white, followed by the range of grays.
 <br><br>
+
         :root {
           --white: rgba(255, 255, 255, 1);
           --gray1: rgba(255, 255, 255, 0.125);
@@ -71,15 +72,18 @@ Keyframes animations work with different states of the animation. To accomplish 
 <br><br>
 Beginning with the first state of 0% and final state of 100% (to represent a full loop), we can add a box-shadow like so:
 <br><br>
+
         @keyframes spin-circle {
           0%,
           100% {
               box-shadow: 0 -100px 0 0 var(--white);
           }
         }
+
 <br><br>
 This represents the first box shadow, which'll be a white circle 100px north of the original div. Now we want to create 7 more box shadows for this state, each representing a more opaque gradation of the original white. Each circle will be given different x,y coordinates to orbit around the original div.
 <br><br>
+
         @keyframes spin-circle {
           0%,
           100% {
@@ -94,8 +98,10 @@ This represents the first box shadow, which'll be a white circle 100px north of 
                   -70px -70px 0 0 var(--gray7);
           }
         }
+
 <br><br>
 And now we create the multiple states, but with the colors shifted up for each state.
+
         @keyframes spin-circle {
           0%,
           100% {
@@ -109,7 +115,7 @@ And now we create the multiple states, but with the colors shifted up for each s
                   -100px 0 0 0 var(--gray6),
                   -70px -70px 0 0 var(--gray7);
           }
-          
+
           12.5% {
               box-shadow:
                   0 -100px 0 0 var(--gray7),
@@ -121,6 +127,7 @@ And now we create the multiple states, but with the colors shifted up for each s
                   -100px 0 0 0 var(--gray5),
                   -70px -70px 0 0 var(--gray6);
           }
+
           25% {
               box-shadow:
                   0 -100px 0 0 var(--gray6),
