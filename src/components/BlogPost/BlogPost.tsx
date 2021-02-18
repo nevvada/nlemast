@@ -10,7 +10,7 @@ import Image from '../Image/Image';
 
 import PostsContext from '../../PostsContext';
 
-import { StyledArticle, StyledH4 } from './styles';
+import { StyledArticle, StyledH1, StyledH4 } from './styles';
 
 const BlogPost: React.FC = () => {
   const { blogType, date } = useParams<Params>();
@@ -29,7 +29,7 @@ const BlogPost: React.FC = () => {
   return title
     ? (
       <>
-        <h1>{title}</h1>
+        <StyledH1>{title}</StyledH1>
         <StyledArticle>
           <StyledH4>{date}</StyledH4>
           <div ref={rootRef}>
