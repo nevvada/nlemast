@@ -26,6 +26,13 @@ export const StyledGlobal = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
+  ul li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+  }
+
   a {
     color: #000;
     font-weight: 900;

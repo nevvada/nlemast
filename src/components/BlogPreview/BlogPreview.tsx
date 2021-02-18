@@ -1,27 +1,22 @@
-import { Location } from 'history';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { StyledArticle, StyledDiv } from './styles';
+import { StyledLi, StyledDiv } from './styles';
 
 interface Props {
   date: string;
-  pathname: Location['pathname'];
   title: string;
 }
 
-const BlogPreview: React.FC<Props> = (props) => {
-  const { date, pathname, title } = props;
+const BlogPreview: React.FC<Props> = ({ date, title }) => {
+  const { pathname } = useLocation();
 
   return (
     <StyledDiv>
       <Link
-        to={{
-          pathname: `${pathname}/${date}`,
-          state: props,
-        }}
+        to={`${pathname}/${date}`}
       >
-        <StyledArticle>{title}</StyledArticle>
+        <StyledLi>{title}</StyledLi>
       </Link>
     </StyledDiv>
   );
