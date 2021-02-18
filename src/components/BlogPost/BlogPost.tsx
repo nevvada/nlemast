@@ -1,6 +1,9 @@
 import Markdown from 'markdown-to-jsx';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
+
+import hljs from 'highlight.js';
+import 'highlight.js/styles/atom-one-light.css';
 
 import Anchor from '../Anchor/Anchor';
 import Image from '../Image/Image';
@@ -15,29 +18,36 @@ const BlogPost: React.FC = () => {
   const allPosts = useContext(PostsContext);
   const { markdown, title } = allPosts?.[blogType]?.[date] || {};
 
-  return (
-    title
-        ? (
-          <>
-            <h1>{title}</h1>
-            <StyledArticle>
-              <StyledH4>{date}</StyledH4>
-              <Markdown
-                options={{
-                  overrides: {
-                    a: { component: Anchor },
-                    img: { component: Image },
-                  },
-                }}
-              >
-                {markdown}
-              </Markdown>
-            </StyledArticle>
-          </>
-        )
-        : <>¯\_(ツ)_/¯</>
-      
-  );
+  const rootRef = useRef<HTMLDivElement>();
+
+  useEffect(() => {
+    rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
+      hljs.highlightBlock(block);
+    });
+  }, []);
+
+  return title
+    ? (
+      <>
+        <h1>{title}</h1>
+        <StyledArticle>
+          <StyledH4>{date}</StyledH4>
+          <div ref={rootRef}>
+            <Markdown
+              options={{
+                overrides: {
+                  a: { component: Anchor },
+                  img: { component: Image },
+                },
+              }}
+            >
+              {markdown}
+            </Markdown>
+          </div>
+        </StyledArticle>
+      </>
+    )
+    : <>¯\_(ツ)_/¯</>;
 };
 
 export default BlogPost;
