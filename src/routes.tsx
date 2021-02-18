@@ -7,16 +7,16 @@ import BlogPost from './components/BlogPost/BlogPost';
 
 const routes: RouteProps[] = [
   {
+    component: About,
+    path: '/about',
+  },
+  {
     component: BlogPost,
     path: '/:blogType/:date'
   },
   {
     component: Blog,
     path: '/:blogType',
-  },
-  {
-    component: About,
-    path: '/about',
   },
 ];
 
