@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDiv } from './styles';
+import { StyledSpan } from './styles';
 
 interface HTMLImageProps {
   src: string;
@@ -7,9 +7,9 @@ interface HTMLImageProps {
 }
 
 const Image: React.FC<HTMLImageProps> = (props) => (
-  <StyledDiv>
+  <StyledSpan>
     <img {...props} />
-  </StyledDiv>
+  </StyledSpan>
 );
 
 export default Image;

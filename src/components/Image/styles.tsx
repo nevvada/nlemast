@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledDiv = styled.div`
-  text-align: center;
+export const StyledSpan = styled.span`
+  display: flex;
+  justify-content: center;
 `;
