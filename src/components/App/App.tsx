@@ -6,6 +6,10 @@ import Home from '../Home/Home';
 
 import { StyledSection, StyledDiv, StyledGlobal, StyledMain } from './styles';
 
+import posts from '../../posts/allPosts';
+
+import PostsContext from '../../PostsContext';
+
 const App: React.FC = () => (
   <>
     <StyledGlobal />
@@ -13,9 +17,11 @@ const App: React.FC = () => (
       <StyledDiv />
       <Router>
         <Home />
-        <StyledSection>
-          <Switch>{renderRoutes()}</Switch>
-        </StyledSection>
+        <PostsContext.Provider value={posts}>
+          <StyledSection>
+            <Switch>{renderRoutes()}</Switch>
+          </StyledSection>
+        </PostsContext.Provider>
       </Router>
     </StyledMain>
   </>
