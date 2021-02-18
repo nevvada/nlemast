@@ -4,7 +4,11 @@ import { renderRoutes } from '../../routes';
 
 import Home from '../Home/Home';
 
-import { StyledArticle, StyledDiv, StyledGlobal, StyledMain } from './styles';
+import { StyledSection, StyledDiv, StyledGlobal, StyledMain } from './styles';
+
+import posts from '../../posts/allPosts';
+
+import PostsContext from '../../PostsContext';
 
 const App: React.FC = () => (
   <>
@@ -13,9 +17,11 @@ const App: React.FC = () => (
       <StyledDiv />
       <Router>
         <Home />
-        <StyledArticle>
-          <Switch>{renderRoutes()}</Switch>
-        </StyledArticle>
+        <PostsContext.Provider value={posts}>
+          <StyledSection>
+            <Switch>{renderRoutes()}</Switch>
+          </StyledSection>
+        </PostsContext.Provider>
       </Router>
     </StyledMain>
   </>

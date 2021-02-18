@@ -26,6 +26,13 @@ export const StyledGlobal = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
 
+  ul li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+  }
+
   a {
     color: #000;
     font-weight: 900;
@@ -37,20 +44,20 @@ export const StyledMain = styled.main`
   margin: 0 auto;
 `;
 
-export const StyledArticle = styled.article`
+export const StyledSection = styled.section`
   line-height: 1.5em;
-  margin: 0 auto;
+  margin: 0 auto 3em auto;
   max-width: 39em;
 `;
 
 export const StyledDiv = styled.div`
-  border-left: 50em solid transparent;
-  border-right: 50em solid transparent;
-  border-top: 50em solid rgba(0, 0, 0, 0.02);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 50vw solid rgba(0, 0, 0, 0.02);
   height: 0;
   left: 0;
   margin: auto;
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 0;
   z-index: -1;

@@ -1,22 +1,22 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, RouteProps } from 'react-router-dom';
 
 import About from './components/About/About';
-import ProgrammingBlog from './components/CodingBlog/CodingBlog';
-import RandomStuffBlog from './components/ScribblesBlog/ScribblesBlog';
+import Blog from './components/Blog/Blog';
+import BlogPost from './components/BlogPost/BlogPost';
 
-const routes = [
-  {
-    component: ProgrammingBlog,
-    path: '/coding-stuff',
-  },
-  {
-    component: RandomStuffBlog,
-    path: '/scribbles',
-  },
+const routes: RouteProps[] = [
   {
     component: About,
     path: '/about',
+  },
+  {
+    component: BlogPost,
+    path: '/:blogType/:date'
+  },
+  {
+    component: Blog,
+    path: '/:blogType',
   },
 ];
 
