@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { StyledDiv, StyledLi, StyledSpan } from './styles';
+import {
+  StyledDateSpan,
+  StyledDiv,
+  StyledLi,
+  StyledTitleSpan,
+} from './styles';
 
 interface Props {
   date: string;
@@ -17,8 +22,8 @@ const BlogPreview: React.FC<Props> = ({ date, title }) => {
         to={`${pathname}/${date}`}
       >
         <StyledLi>
-          <StyledSpan>{title}</StyledSpan>
-          <span>{date}</span>
+          <StyledTitleSpan>{title}</StyledTitleSpan>
+          <StyledDateSpan>{date}</StyledDateSpan>
         </StyledLi>
       </Link>
     </StyledDiv>

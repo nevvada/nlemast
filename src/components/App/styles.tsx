@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+import BREAKPOINTS from '../../constants/breakpoints';
+import COLORS from '../../constants/colors';
+
 export const StyledGlobal = createGlobalStyle`
   body {
     background-color: #F7F7FF;
@@ -34,8 +37,7 @@ export const StyledGlobal = createGlobalStyle`
   }
 
   a {
-    color: #000;
-    font-weight: 900;
+    color: ${COLORS['primary']};
     text-decoration: none;
   }
 `;
@@ -45,9 +47,15 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledSection = styled.section`
+  display: flex;
+  justify-content: center;
   line-height: 1.5em;
   margin: 0 auto 3em auto;
   max-width: 39em;
+
+  @media only screen and ${BREAKPOINTS['tablet']} {
+    margin: 0 2em 3em 2em;
+  }
 `;
 
 export const StyledDiv = styled.div`

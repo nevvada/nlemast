@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { StyledAnchor } from './styles';
+
 const Anchor: React.FC<{href: string}> = (props) => (
-  <a
+  <StyledAnchor
     {...props}
     rel="noopener"
     target="_blank"

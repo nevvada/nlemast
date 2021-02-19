@@ -7,15 +7,15 @@ Ah, loading spinners. They're fun visual CSS projects. Seemingly confusing to cr
 So this trick consists of these simple steps:
 <br><br>
 
-1. creating a circular div
+&nbsp;&nbsp;1. creating a circular div
 <br>
-2. adding a box shadow
+&nbsp;&nbsp;2. adding a box shadow
 <br>
-3. positioning the box shadow
+&nbsp;&nbsp;3. positioning the box shadow
 <br>
-4. positioning 7 more box shadows
+&nbsp;&nbsp;4. positioning 7 more box shadows
 <br>
-5. animation!
+&nbsp;&nbsp;5. animation!
 
 <br><br>
 Let's sketch out how box shadow works. But first, let's look at how axes work in CSS.

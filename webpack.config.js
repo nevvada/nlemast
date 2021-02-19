@@ -6,7 +6,6 @@ const environment = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: environment,
   entry: path.join(__dirname, 'src', 'index.tsx'),
-  // target: 'node',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'dist/bundle.js',
@@ -31,6 +30,10 @@ module.exports = {
         exclude: /node_modules/,
         test: /\.tsx?$/,
         use: 'ts-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: 'url-loader',
       },
     ],
   },
