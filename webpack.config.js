@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const path = require('path');
 
 const environment = process.env.NODE_ENV || 'development';
@@ -31,6 +32,10 @@ module.exports = {
         exclude: /node_modules/,
         test: /\.tsx?$/,
         use: 'ts-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: 'url-loader',
       },
     ],
   },
