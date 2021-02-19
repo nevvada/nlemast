@@ -6,6 +6,8 @@ import BlogPreview from '../BlogPreview/BlogPreview';
 
 import PostsContext from '../../PostsContext';
 
+import { StyledUl } from './styles';
+
 interface Props extends RouteComponentProps<Params> {}
 
 const renderBlogPreviews = (posts: Posts) => (
@@ -21,9 +23,9 @@ const Blog: React.FC<Props> = () => {
   const blogTypePosts = allPosts[blogType];
 
   return (
-    <ul>
+    <StyledUl>
       {renderBlogPreviews(blogTypePosts)}
-    </ul>
+    </StyledUl>
   );
 };
 
