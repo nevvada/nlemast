@@ -1,6 +1,8 @@
 import { Link, LinkProps } from 'react-router-dom';
 import styled from 'styled-components';
 
+import COLORS from '../../constants/colors';
+
 export const StyledH1 = styled.h1`
   font-size: 5em;
   margin: 0.5em;
@@ -28,12 +30,12 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledLink = styled(Link)<LinkProps & { active: 1 | 0 }>`
-  color: ${props => props.active ? '#871F78' : '#000'};
+  color: ${props => props.active ? COLORS['secondary'] : COLORS['primary']};
   font-weight: ${props => props.active ? '900' : '100'};
   transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
   &:hover {
-    color: #871F78;
+    color: ${COLORS['secondary']};
     transform: translate(2px, 0px);
   }
 `;

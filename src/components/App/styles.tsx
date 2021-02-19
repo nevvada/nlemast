@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+import COLORS from '../../constants/colors';
+
 export const StyledGlobal = createGlobalStyle`
   body {
     background-color: #F7F7FF;
@@ -34,7 +36,7 @@ export const StyledGlobal = createGlobalStyle`
   }
 
   a {
-    color: #000;
+    color: ${COLORS['primary']};
     text-decoration: none;
   }
 `;
