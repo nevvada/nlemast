@@ -2,7 +2,7 @@ const post = {
   date: '2020-07-11',
   title: 'On Files and File Readers',
   markdown: `
-Ah, files. We do so much with them. And Javascript has a pretty unique way of working with them directly in the browser. For starters, we can use the \`File.File()\` API to create a file.
+Files. We do so much with them. And Javascript has a pretty unique way of working with them directly in the browser. For starters, we can use the \`File.File()\` API to create a file.
 <br><br>
 
 \`\`\`js

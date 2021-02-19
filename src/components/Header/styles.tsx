@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import COLORS from '../../constants/colors';
 
 export const StyledH1 = styled.h1`
+  color: ${COLORS['primary']};
   font-size: 5em;
   margin: 0.5em;
 `;
