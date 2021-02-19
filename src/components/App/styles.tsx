@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+import BREAKPOINTS from '../../constants/breakpoints';
 import COLORS from '../../constants/colors';
 
 export const StyledGlobal = createGlobalStyle`

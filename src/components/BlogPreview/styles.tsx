@@ -23,5 +23,5 @@ export const StyledLi = styled.li`
 `;
 
 export const StyledSpan = styled.span`
-  max-width: 75%;
+  max-width: 60%;
 `;

@@ -1,17 +1,20 @@
 import { Link, LinkProps } from 'react-router-dom';
 import styled from 'styled-components';
 
+import BREAKPOINTS from '../../constants/breakpoints';
 import COLORS from '../../constants/colors';
 
 export const StyledH1 = styled.h1`
   color: ${COLORS['primary']};
   font-size: 5em;
   margin: 0.5em;
+  text-align: center;
 `;
 
 export const StyledH2 = styled.h2`
   font-size: 2em;
   margin: 0.5em;
+  text-align: center;
 `;
 
 export const StyledHeader = styled.header`
@@ -21,8 +24,11 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledNav = styled.nav`
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   display: flex;
   justify-content: space-around;
+  margin: 2em;
   padding: 1em;
   width: 50%;
 
