@@ -2,8 +2,8 @@ import React from 'react';
 import { StyledSpan } from './styles';
 
 interface HTMLImageProps {
-  src: string;
   alt: string;
+  src: string;
 }
 
 const Image: React.FC<HTMLImageProps> = (props) => (

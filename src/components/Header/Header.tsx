@@ -12,6 +12,7 @@ import {
 const Header: React.FC = () => {
   const { pathname } = useLocation();
 
+  const homePath = '/';
   const aboutPath = '/about';
   const codingStuffPath = '/coding-stuff';
   const scribblesPath = '/scribbles';
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
   return (
     <StyledHeader>
       <StyledH1>
-        <Link to="/">nathan le master</Link>
+        <Link to={homePath}>nathan le master</Link>
       </StyledH1>
       <StyledH2>software engineer &middot; writer &middot; very online person</StyledH2>
       <hr></hr>

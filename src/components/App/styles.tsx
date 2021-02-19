@@ -47,6 +47,8 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledSection = styled.section`
+  display: flex;
+  justify-content: center;
   line-height: 1.5em;
   margin: 0 auto 3em auto;
   max-width: 39em;
