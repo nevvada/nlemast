@@ -4,6 +4,7 @@ import { Route, RouteProps } from 'react-router-dom';
 import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import BlogPost from './components/BlogPost/BlogPost';
+import Home from './components/Home/Home';
 
 const routes: RouteProps[] = [
   {
@@ -17,6 +18,10 @@ const routes: RouteProps[] = [
   {
     component: Blog,
     path: '/:blogType',
+  },
+  {
+    component: Home,
+    path: '/',
   },
 ];
 
