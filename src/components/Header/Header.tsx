@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { StyledH1, StyledH2, StyledHeader, StyledNav } from './styles';
 
-const Home: React.FC = () => (
+const Header: React.FC = () => (
   <>
     <StyledHeader>
       <StyledH1><Link to="/">nathan le master</Link></StyledH1>
@@ -18,4 +18,4 @@ const Home: React.FC = () => (
   </>
 );
 
-export default Home;
+export default Header;

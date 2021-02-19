@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { renderRoutes } from '../../routes';
 
-import Home from '../Home/Home';
+import Header from '../Header/Header';
 
 import { StyledSection, StyledDiv, StyledGlobal, StyledMain } from './styles';
 
@@ -16,7 +16,7 @@ const App: React.FC = () => (
     <StyledMain>
       <StyledDiv />
       <Router>
-        <Home />
+        <Header />
         <PostsContext.Provider value={posts}>
           <StyledSection>
             <Switch>{renderRoutes()}</Switch>
