@@ -35,7 +35,6 @@ export const StyledGlobal = createGlobalStyle`
 
   a {
     color: #000;
-    font-weight: 900;
     text-decoration: none;
   }
 `;

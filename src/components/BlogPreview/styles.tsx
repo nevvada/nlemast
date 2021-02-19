@@ -10,12 +10,13 @@ export const StyledLi = styled.li`
   font-size: 1.5em;
   justify-content: space-around;
   padding: 1em;
+  transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
   &:hover {
-    border: 1px dashed #000;
-    border-radius: 5px;
+    color: #871F78;
     cursor: pointer;
     text-decoration: none;
+    transform: translate(2px, 0px);
   }
 `;
 
