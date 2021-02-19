@@ -2,7 +2,7 @@ import Markdown from 'markdown-to-jsx';
 import React, { useContext, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/atom-one-light.css';
 
 import Anchor from '../Anchor/Anchor';
