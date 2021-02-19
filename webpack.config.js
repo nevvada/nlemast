@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const path = require('path');
 
 const environment = process.env.NODE_ENV || 'development';
@@ -7,7 +6,6 @@ const environment = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: environment,
   entry: path.join(__dirname, 'src', 'index.tsx'),
-  // target: 'node',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'dist/bundle.js',
