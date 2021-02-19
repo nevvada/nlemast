@@ -1,16 +1,23 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const path = require('path');
 
 const environment = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode: environment,
+  devtool: 'inline-source-map',
   entry: path.join(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'dist/bundle.js',
     publicPath: '/',
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
