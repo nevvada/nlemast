@@ -1,3 +1,4 @@
+import { Link, LinkProps } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledH1 = styled.h1`
@@ -24,4 +25,15 @@ export const StyledNav = styled.nav`
   width: 50%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+`;
+
+export const StyledLink = styled(Link)<LinkProps & { active: 1 | 0 }>`
+  color: ${props => props.active ? '#871F78' : '#000'};
+  font-weight: ${props => props.active ? '900' : '100'};
+  transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
+
+  &:hover {
+    color: #871F78;
+    transform: translate(2px, 0px);
+  }
 `;
