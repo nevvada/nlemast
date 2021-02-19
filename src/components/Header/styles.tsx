@@ -24,10 +24,20 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-around;
   padding: 1em;
-  margin: 2em;
   width: 50%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+
+  @media only screen and ${BREAKPOINTS['laptop']} {
+    width: 60%;
+  }
+
+  @media only screen and ${BREAKPOINTS['tablet']} {
+    width: 75%;
+  }
+
+  @media only screen and ${BREAKPOINTS['mobile']} {
+    width: 90%;
+  }
+
 `;
 
 export const StyledLink = styled(Link)<LinkProps & { active: 1 | 0 }>`

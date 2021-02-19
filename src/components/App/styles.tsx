@@ -49,6 +49,10 @@ export const StyledSection = styled.section`
   line-height: 1.5em;
   margin: 0 auto 3em auto;
   max-width: 39em;
+
+  @media only screen and ${BREAKPOINTS['tablet']} {
+    margin: 0 2em 3em 2em;
+  }
 `;
 
 export const StyledDiv = styled.div`
