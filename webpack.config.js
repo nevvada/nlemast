@@ -1,3 +1,4 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -49,10 +50,11 @@ module.exports = {
     historyApiFallback: true, // for react router
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       filename: './index.html',
       inject: true,
       template: './src/index.html',
-    })
-  ]
+    }),
+  ],
 };
