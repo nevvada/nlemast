@@ -2,12 +2,17 @@ import styled from 'styled-components';
 
 import COLORS from '../../constants/colors';
 
+export const StyledDateSpan = styled.span`
+  font-size: 0.75em;
+`;
+
 export const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
 export const StyledLi = styled.li`
+  align-items: center;
   display: flex;
   font-size: 1.5em;
   justify-content: space-around;
@@ -22,6 +27,6 @@ export const StyledLi = styled.li`
   }
 `;
 
-export const StyledSpan = styled.span`
+export const StyledTitleSpan = styled.span`
   max-width: 60%;
 `;
