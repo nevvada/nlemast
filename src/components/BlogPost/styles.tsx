@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const StyledDiv = styled.div`
+  width: -webkit-fill-available;
+  width: fill-available;
+`;
+
 export const StyledH1 = styled.h1`
   font-size: 2em;
   line-height: 1em;

@@ -10,7 +10,12 @@ import Image from '../Image/Image';
 
 import PostsContext from '../../PostsContext';
 
-import { StyledArticle, StyledH1, StyledH4 } from './styles';
+import {
+  StyledArticle,
+  StyledDiv,
+  StyledH1,
+  StyledH4,
+} from './styles';
 
 const BlogPost: React.FC = () => {
   const { blogType, date } = useParams<Params>();
@@ -28,7 +33,7 @@ const BlogPost: React.FC = () => {
 
   return title
     ? (
-      <>
+      <StyledDiv>
         <StyledH1>{title}</StyledH1>
         <StyledArticle>
           <StyledH4>{date}</StyledH4>
@@ -45,7 +50,7 @@ const BlogPost: React.FC = () => {
             </Markdown>
           </div>
         </StyledArticle>
-      </>
+      </StyledDiv>
     )
     : <>¯\_(ツ)_/¯</>;
 };
