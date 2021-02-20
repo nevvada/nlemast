@@ -4,8 +4,8 @@
   "description": "<!-- **nlemast/nlemast** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
   "main": "index.tsx",
   "scripts": {
-    "dev": "webpack serve --open --config webpack/webpack.dev.js && yarn server",
-    "build": "rm -rf dist && webpack serve --config webpack/webpack.prod.js --mode production",
+    "dev": "webpack serve --open --config ./webpack/webpack.dev.js && yarn server",
+    "build": "rm -rf dist && webpack --config ./webpack/webpack.prod.js --mode production",
     "server": "node server/server.js",
     "type-check": "tsc --pretty --noEmit",
     "bundle-report": "webpack-bundle-analyzer --port 4200 compilation-stats.json"
