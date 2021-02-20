@@ -2,10 +2,12 @@ const path = require('path');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  entry: path.join(__dirname, '../', 'src', 'index.tsx'),
+  entry: {
+    app: path.join(__dirname, '../', 'src', 'index.tsx')
+  },
   module: {
     rules: [
       {
@@ -34,11 +36,11 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../', 'dist'),
-    filename: 'dist/bundle.js',
+    filename: 'bundle.js',
     publicPath: '/',
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: './index.html',
