@@ -18,6 +18,8 @@ import {
   StyledH4,
 } from './styles';
 
+const CODE_LANGUAGES = ['css', 'javascript'];
+
 const BlogPost: React.FC = () => {
   const { blogType, date } = useParams<Params>();
 
@@ -27,35 +29,43 @@ const BlogPost: React.FC = () => {
   const rootRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
-    if (title) {
-      rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
-        hljs.highlightBlock(block);
-      });  
-    }
+    CODE_LANGUAGES.forEach((langName) => {
+      const langModule = require(`highlight.js/lib/languages/${langName}`);
+
+      hljs.registerLanguage(langName, langModule);
+    });
   }, []);
 
-  return title
-    ? (
-      <StyledDiv>
-        <StyledH1>{title}</StyledH1>
-        <StyledArticle>
-          <StyledH4>{date}</StyledH4>
-          <div ref={rootRef}>
-            <Markdown
-              options={{
-                overrides: {
-                  a: { component: Anchor },
-                  img: { component: Image },
-                },
-              }}
-            >
-              {markdown}
-            </Markdown>
-          </div>
-        </StyledArticle>
-      </StyledDiv>
-    )
-    : <NotFound />
+  useEffect(() => {
+    rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
+      hljs.highlightBlock(block);
+    });  
+  }, []);
+
+  return (
+    title
+      ? (
+        <StyledDiv>
+          <StyledH1>{title}</StyledH1>
+          <StyledArticle>
+            <StyledH4>{date}</StyledH4>
+            <div ref={rootRef}>
+              <Markdown
+                options={{
+                  overrides: {
+                    a: { component: Anchor },
+                    img: { component: Image },
+                  },
+                }}
+              >
+                {markdown}
+              </Markdown>
+            </div>
+          </StyledArticle>
+        </StyledDiv>
+        )
+      : <NotFound />
+  )
 };
 
 export default BlogPost;
