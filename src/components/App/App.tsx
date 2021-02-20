@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { renderRoutes } from '../../routes';
 
@@ -19,7 +19,9 @@ const App: React.FC = () => (
         <Header />
         <PostsContext.Provider value={posts}>
           <StyledSection>
-            <Switch>{renderRoutes()}</Switch>
+            <Suspense fallback={null}>
+              <Switch>{renderRoutes()}</Switch>
+            </Suspense>
           </StyledSection>
         </PostsContext.Provider>
       </Router>
