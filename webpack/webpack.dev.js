@@ -16,10 +16,6 @@ module.exports = merge(common, {
   },
   devtool: 'inline-source-map',
   mode: 'development',
-  performance: {
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-  },
   plugins: [
     new DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
