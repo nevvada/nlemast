@@ -1,15 +1,12 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const environment = process.env.NODE_ENV || 'development';
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  mode: environment,
-  entry: path.join(__dirname, 'src', 'index.tsx'),
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'dist/bundle.js',
-    publicPath: '/',
+  entry: {
+    app: path.join(__dirname, '../', 'src', 'index.tsx')
   },
   module: {
     rules: [
@@ -37,22 +34,21 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    compress: true,
-    port: 8000,
+  output: {
+    path: path.join(__dirname, '../', 'dist'),
+    filename: 'bundle.js',
     publicPath: '/',
-    hot: true,
-    historyApiFallback: true, // for react router
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: './index.html',
       inject: true,
       template: './src/index.html',
-    })
-  ]
+    }),
+  ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
 };
