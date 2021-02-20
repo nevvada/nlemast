@@ -7,6 +7,7 @@ import 'highlight.js/styles/atom-one-light.css';
 
 import Anchor from '../Anchor/Anchor';
 import Image from '../Image/Image';
+import NotFound from '../NotFound/NotFound';
 
 import PostsContext from '../../PostsContext';
 
@@ -26,9 +27,11 @@ const BlogPost: React.FC = () => {
   const rootRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
-    rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
-      hljs.highlightBlock(block);
-    });
+    if (title) {
+      rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
+        hljs.highlightBlock(block);
+      });  
+    }
   }, []);
 
   return title
@@ -52,7 +55,7 @@ const BlogPost: React.FC = () => {
         </StyledArticle>
       </StyledDiv>
     )
-    : <>¯\_(ツ)_/¯</>;
+    : <NotFound />
 };
 
 export default BlogPost;

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { RouteComponentProps } from 'react-router';
 
 import BlogPreview from '../BlogPreview/BlogPreview';
+import NotFound from '../NotFound/NotFound';
 
 import PostsContext from '../../PostsContext';
 
@@ -24,7 +25,11 @@ const Blog: React.FC<Props> = () => {
 
   return (
     <StyledUl>
-      {renderBlogPreviews(blogTypePosts)}
+      {
+        blogTypePosts
+          ? renderBlogPreviews(blogTypePosts)
+          : <NotFound />
+      }
     </StyledUl>
   );
 };
