@@ -13,20 +13,24 @@ const Home = lazy(() => import('./components/Home/Home'));
 
 const routes: RouteProps[] = [
   {
+    component: Home,
+    exact: true,
+    path: '/',
+  },
+  {
     component: About,
+    exact: true,
     path: '/about',
   },
   {
-    component: BlogPost,
-    path: '/:blogType/:date'
-  },
-  {
     component: Blog,
+    exact: true,
     path: '/:blogType',
   },
   {
-    component: Home,
-    path: '/',
+    component: BlogPost,
+    exact: true,
+    path: '/:blogType/:date'
   },
 ];
 
