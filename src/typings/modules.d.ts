@@ -4,6 +4,6 @@ declare module '*.svg' {
 }
 
 declare module 'highlight.js/lib/core' {
-  const content: typeof import('highlight.js');
+  const content: any;
   export default content;
 }

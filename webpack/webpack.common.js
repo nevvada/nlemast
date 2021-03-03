@@ -2,7 +2,7 @@ const path = require('path');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { ContextReplacementPlugin } = require('webpack');
 
 module.exports = {
   entry: {
@@ -42,6 +42,10 @@ module.exports = {
   plugins: [
     // new BundleAnalyzerPlugin(),
     new CleanWebpackPlugin(),
+    new ContextReplacementPlugin(
+      /highlight\.js\/lib\/languages$/,
+      new RegExp(`^./(${['css', 'javascript'].join('|')})$`),
+    ),
     new HtmlWebpackPlugin({
       filename: './index.html',
       inject: true,
