@@ -30,9 +30,7 @@ const BlogPost: React.FC = () => {
 
   useEffect(() => {
     CODE_LANGUAGES.forEach((langName) => {
-      const langModule = require(`highlight.js/lib/languages/${langName}`);
-
-      hljs.registerLanguage(langName, langModule);
+      hljs.registerLanguage(langName, import(`highlight.js/lib/languages/${langName}`));
     });
   }, []);
 
