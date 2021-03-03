@@ -16,8 +16,8 @@ export const StyledLi = styled.li`
   display: flex;
   font-size: 1.5em;
   justify-content: space-around;
-  transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
   padding: 1em;
+  transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
   &:hover {
     color: ${COLORS['secondary']};
