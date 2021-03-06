@@ -78,7 +78,13 @@ it’s not a lie…if you believe it.
 <br><br>
 Reddit threads, further reading for the curious:
 <br><br>
-
+[Tulpa Guides and Resources](https://www.reddit.com/r/Tulpas/wiki/guides)<br>
+[My name is Jay, and I'm a tulpa.](https://www.reddit.com/r/Tulpas/comments/13wuxc/my_name_is_jay_and_im_a_tulpa/?st=j1tyb6dk&sh=8a50b554)<br>
+[The internet is laughing at us and you shouldn't care.](https://www.reddit.com/r/Tulpas/comments/14zbli/the_internet_is_laughing_at_us_and_you_shouldnt/?st=j1tyx2lv&sh=8eccae7c)<br>
+[Tulpa hardships: Do we tend to neglect the shit tulpas go through?](https://www.reddit.com/r/Tulpas/comments/3xprqr/tulpa_hardships_do_we_tend_to_neglect_the_shit/?st=j1tyy5l6&sh=3c9a39c1)<br>
+[Please please PLEASE stop posting about your tulpa leaving.](https://www.reddit.com/r/Tulpas/comments/1cxf2c/please_please_please_stop_posting_about_your/?st=j1tz1xxo&sh=b228599f)<br>
+[What’s your single favorite SFW activity to do with your Tulpa](https://www.reddit.com/r/Tulpas/comments/65h06n/whats_your_single_favorite_sfw_activity_to_do/?st=j1tz5d1x&sh=cd70371d)<br>
+[I think I almost killed my Tulpa.](https://www.reddit.com/r/Tulpas/comments/4d27hr/i_think_i_almost_killed_my_tulpa/)<br>
 `,
 };
 
