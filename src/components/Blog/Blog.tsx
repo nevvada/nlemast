@@ -10,7 +10,7 @@ import { StyledUl } from './styles';
 
 type Props = RouteComponentProps<Params>;
 
-const renderBlogPreviews = (posts: Posts) => (
+export const renderBlogPreviews = (posts: Post[] = []): JSX.Element[] => (
   Object.entries(posts).map(([date, post]) => (
     <BlogPreview {...post} key={date} />
   ))
