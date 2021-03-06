@@ -2,6 +2,7 @@ const path = require('path');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { ContextReplacementPlugin } = require('webpack');
 
 module.exports = {
@@ -35,8 +36,8 @@ module.exports = {
     ],
   },
   output: {
+    filename: '[name].js',
     path: path.join(__dirname, '../', 'dist'),
-    filename: 'bundle.js',
     publicPath: '/',
   },
   plugins: [
