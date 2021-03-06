@@ -1,8 +1,10 @@
 import { renderBlogPreviews } from './Blog';
 
-test('renders nothing if no argument is passed in', () => {
-  const result = renderBlogPreviews();
-  const expected = [];
+describe('renderBlogPreviews', () => {
+  test('returns empty array if no argument is passed in', () => {
+    const result = renderBlogPreviews();
+    const expected = [];
 
-  expect(result).toEqual(expected);
+    expect(result).toEqual(expected);
+  });
 });
