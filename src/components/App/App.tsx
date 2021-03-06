@@ -4,7 +4,12 @@ import { renderRoutes } from '../../routes';
 
 import Header from '../Header/Header';
 
-import { StyledSection, StyledDiv, StyledGlobal, StyledMain } from './styles';
+import {
+  StyledSection,
+  StyledDiv,
+  StyledGlobal,
+  StyledMain,
+} from './styles';
 
 import posts from '../../posts/allPosts';
 

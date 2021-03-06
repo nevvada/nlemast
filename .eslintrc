@@ -7,7 +7,6 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended"
   ],
-  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -17,5 +16,10 @@
     "import",
     "jsx-a11y",
     "react"
-  ]
+  ],
+  "root": true,
+  "rules": {
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0
+  }
 }

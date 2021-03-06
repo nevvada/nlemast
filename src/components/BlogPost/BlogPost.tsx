@@ -30,7 +30,7 @@ const BlogPost: React.FC = () => {
 
   useEffect(() => {
     CODE_LANGUAGES.forEach((langName) => {
-      const langModule = require(`highlight.js/lib/languages/${langName}`);
+      const langModule = require(`highlight.js/lib/languages/${langName}`); // eslint-disable-line
 
       hljs.registerLanguage(langName, langModule);
     });
@@ -39,7 +39,7 @@ const BlogPost: React.FC = () => {
   useEffect(() => {
     rootRef.current.querySelectorAll('pre code').forEach((block: HTMLElement) => {
       hljs.highlightBlock(block);
-    });  
+    });
   }, []);
 
   return (
@@ -63,9 +63,9 @@ const BlogPost: React.FC = () => {
             </div>
           </StyledArticle>
         </StyledDiv>
-        )
+      )
       : <NotFound />
-  )
+  );
 };
 
 export default BlogPost;
