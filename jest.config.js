@@ -1,7 +1,8 @@
 module.exports = {
   moduleDirectories: [
     'node_modules',
-    'src'
+    '<rootDir>/node_modules',
+    '.',
   ],
   moduleFileExtensions: [
     'js',
@@ -9,6 +10,7 @@ module.exports = {
     'ts',
     'tsx'
   ],
+  preset: 'ts-jest',
   transform: {
     '^.+\\.(ts|tsx)?$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest',
