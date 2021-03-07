@@ -28,6 +28,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "highlight.js": "^10.6.0",
+    "history": "4.10.1",
     "markdown-to-jsx": "^7.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -40,6 +41,7 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
+    "@testing-library/react": "^11.2.5",
     "@types/highlight.js": "^10.1.0",
     "@types/jest": "^26.0.20",
     "@types/markdown-to-jsx": "^6.11.3",
