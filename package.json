@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "server": "node server/server.js",
     "test": "jest",
+    "test:watch": "jest --watch",
     "type-check": "tsc --pretty --noEmit"
   },
   "repository": {
@@ -41,6 +42,7 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
+    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/highlight.js": "^10.1.0",
     "@types/jest": "^26.0.20",
