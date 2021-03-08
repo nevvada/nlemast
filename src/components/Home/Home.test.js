@@ -8,8 +8,8 @@ describe('Home component', () => {
   afterEach(cleanup);
 
   it('renders the bongo cat img', () => {
-    const displayedImage = document.querySelector('img');
+    const image = document.querySelector('img');
 
-    expect(displayedImage.alt).toContain('bongo cat');
+    expect(image.alt).toContain('bongo cat');
   });
 });
