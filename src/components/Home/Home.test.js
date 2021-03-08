@@ -7,7 +7,7 @@ describe('Home component', () => {
   render(<Home />);
   afterEach(cleanup);
 
-  it('should render the bongo cat img', () => {
+  it('renders the bongo cat img', () => {
     const displayedImage = document.querySelector('img');
 
     expect(displayedImage.alt).toContain('bongo cat');

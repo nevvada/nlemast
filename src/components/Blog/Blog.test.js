@@ -13,7 +13,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('renderBlogPreviews', () => {
-  test('returns empty array if no argument is passed in', () => {
+  it('returns empty array if no argument is passed in', () => {
     const result = renderBlogPreviews();
     const expected = [];
 
@@ -22,7 +22,7 @@ describe('renderBlogPreviews', () => {
 });
 
 describe('Blog component', () => {
-  test('it renders the component', () => {
+  it('renders the component', () => {
     renderWithRouter(<Blog />, { route: '/coding-stuff' });
   });
 });
