@@ -12,6 +12,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy',
+    "\\.svg$": "<rootDir>/src/mocks/svgMock.js"
   },
   preset: 'ts-jest',
   transform: {
