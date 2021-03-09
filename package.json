@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack/webpack.prod.js --mode production",
     "bundle-report": "webpack-bundle-analyzer --port 4200 compilation-stats.json",
+    "deploy": "yarn build && yarn test",
     "dev": "webpack serve --open --config webpack/webpack.dev.js && yarn server",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "server": "node server/server.js",
