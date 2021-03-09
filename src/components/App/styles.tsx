@@ -37,7 +37,7 @@ export const StyledGlobal = createGlobalStyle`
   }
 
   a {
-    color: ${COLORS['primary']};
+    color: ${COLORS.primary};
     text-decoration: none;
   }
 `;
@@ -53,7 +53,7 @@ export const StyledSection = styled.section`
   margin: 0 auto 3em auto;
   max-width: 39em;
 
-  @media only screen and ${BREAKPOINTS['tablet']} {
+  @media only screen and ${BREAKPOINTS.tablet} {
     margin: 0 2em 3em 2em;
   }
 `;

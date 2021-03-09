@@ -25,12 +25,12 @@ const routes: RouteProps[] = [
   {
     component: BlogPost,
     exact: true,
-    path: '/:blogType/:date'
+    path: '/:blogType/:date',
   },
 ];
 
-export const renderRoutes = () => (
-  routes.map(route => (
-    <Route {...route} />
+export const renderRoutes = (): JSX.Element[] => (
+  routes.map((route) => (
+    <Route {...route} key={route.path as string} />
   ))
 );

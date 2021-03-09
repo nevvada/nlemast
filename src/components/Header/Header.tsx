@@ -23,7 +23,7 @@ const Header: React.FC = () => {
         <Link to={homePath}>nathan le master</Link>
       </StyledH1>
       <StyledH2>software engineer &middot; writer &middot; very online person</StyledH2>
-      <hr></hr>
+      <hr />
       <StyledNav>
         <StyledLink
           active={pathname.match(aboutPath) ? 1 : 0}

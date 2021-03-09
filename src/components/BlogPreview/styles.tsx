@@ -20,7 +20,7 @@ export const StyledLi = styled.li`
   transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
   &:hover {
-    color: ${COLORS['secondary']};
+    color: ${COLORS.secondary};
     cursor: pointer;
     text-decoration: none;
     transform: translate(2px, 0px);

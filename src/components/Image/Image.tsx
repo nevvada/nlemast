@@ -6,9 +6,12 @@ interface HTMLImageProps {
   src: string;
 }
 
-const Image: React.FC<HTMLImageProps> = (props) => (
+const Image: React.FC<HTMLImageProps> = ({ alt, src }) => (
   <StyledSpan>
-    <img {...props} />
+    <img
+      alt={alt}
+      src={src}
+    />
   </StyledSpan>
 );
 
