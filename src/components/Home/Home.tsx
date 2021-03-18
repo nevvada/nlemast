@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledImg } from './styles';
 
-import BongoCat from './bongo-cat.svg';
+import BongoCat from '../../images/BongoCat.svg';
 
 const Home: React.FC = () => (
   <StyledImg

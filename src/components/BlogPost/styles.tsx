@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
-  width: -webkit-fill-available;
-  width: fill-available;
+  width: 100%;
 `;
 
 export const StyledH1 = styled.h1`
@@ -17,7 +16,6 @@ export const StyledH4 = styled.h4`
 
 export const StyledArticle = styled.article`
   * {
-    max-width: -webkit-fill-available;
-    max-width: fill-available;
+    width: 100%;
   }
 `;
