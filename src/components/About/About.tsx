@@ -7,7 +7,7 @@ const About: React.FC = () => (
     <p>
       Hey, I&apos;m Nathan. I&apos;m a software engineer based out of Brooklyn, New York,
       by way of California and Arkansas. I&apos;m most interested in futurism, urban planning,
-      history, biking, and writing. I also like writing, so I&apos;ll probably throw up some things
+      history, and biking. I also like writing, so I&apos;ll probably throw up some things
       I&apos;ve written before, either about programming or random stuff I&apos;ve
       burned time learning about.
       <br />
