@@ -1,4 +1,4 @@
-const post = {
+export default {
   date: '2020-08-22',
   title: 'A Simple Loading Spinner',
   markdown: `
@@ -64,11 +64,11 @@ To begin, we need the starting div, from which all of the box shadows will, uh..
 <br><br>
 
 \`\`\`css
-        .dot-spinner {
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-        }
+    .dot-spinner {
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
 \`\`\`
 
 <br><br>
@@ -76,16 +76,16 @@ Next, we need 8 total colors, representing different shades of gray for each one
 <br><br>
 
 \`\`\`css
-        :root {
-          --white: rgba(255, 255, 255, 1);
-          --gray1: rgba(255, 255, 255, 0.125);
-          --gray2: rgba(255, 255, 255, 0.25);
-          --gray3: rgba(255, 255, 255, 0.375);
-          --gray4: rgba(255, 255, 255, 0.5);
-          --gray5: rgba(255, 255, 255, 0.625);
-          --gray6: rgba(255, 255, 255, 0.75);
-          --gray7: rgba(255, 255, 255, 0.875);
-        }
+    :root {
+      --white: rgba(255, 255, 255, 1);
+      --gray1: rgba(255, 255, 255, 0.125);
+      --gray2: rgba(255, 255, 255, 0.25);
+      --gray3: rgba(255, 255, 255, 0.375);
+      --gray4: rgba(255, 255, 255, 0.5);
+      --gray5: rgba(255, 255, 255, 0.625);
+      --gray6: rgba(255, 255, 255, 0.75);
+      --gray7: rgba(255, 255, 255, 0.875);
+    }
 \`\`\`
 
 <br><br>
@@ -95,12 +95,12 @@ Beginning with the first state of 0% and final state of 100% (to represent a ful
 <br><br>
 
 \`\`\`css
-        @keyframes spin-circle {
-          0%,
-          100% {
-              box-shadow: 0 -100px 0 0 var(--white);
-          }
-        }
+    @keyframes spin-circle {
+      0%,
+      100% {
+          box-shadow: 0 -100px 0 0 var(--white);
+      }
+    }
 \`\`\`
 
 <br><br>
@@ -108,20 +108,20 @@ This represents the first box shadow, which'll be a white circle \`100px\` north
 <br><br>
 
 \`\`\`css
-        @keyframes spin-circle {
-          0%,
-          100% {
-              box-shadow: 
-                  0 -100px 0 0 var(--white),
-                  70px -70px 0 0 var(--gray1),
-                  100px 0 0 0 var(--gray2), 
-                  70px 70px 0 0 var(--gray3),
-                  0px 100px 0 0 var(--gray4),
-                  -70px 70px 0 0 var(--gray5),
-                  -100px 0 0 0 var(--gray6),
-                  -70px -70px 0 0 var(--gray7);
-          }
-        }
+    @keyframes spin-circle {
+      0%,
+      100% {
+          box-shadow: 
+              0 -100px 0 0 var(--white),
+              70px -70px 0 0 var(--gray1),
+              100px 0 0 0 var(--gray2), 
+              70px 70px 0 0 var(--gray3),
+              0px 100px 0 0 var(--gray4),
+              -70px 70px 0 0 var(--gray5),
+              -100px 0 0 0 var(--gray6),
+              -70px -70px 0 0 var(--gray7);
+      }
+    }
 \`\`\`
 
 <br><br>
@@ -129,102 +129,100 @@ And now we create the multiple states, but with the colors shifted up for each s
 <br><br>
 
 \`\`\`css
-        @keyframes spin-circle {
-          0%,
-          100% {
-              box-shadow:
-                  0 -100px 0 0 var(--white),
-                  70px -70px 0 0 var(--gray1),
-                  100px 0 0 0 var(--gray2), 
-                  70px 70px 0 0 var(--gray3),
-                  0px 100px 0 0 var(--gray4),
-                  -70px 70px 0 0 var(--gray5),
-                  -100px 0 0 0 var(--gray6),
-                  -70px -70px 0 0 var(--gray7);
-          }
-
-          12.5% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray7),
-                  70px -70px 0 0 var(--white),
-                  100px 0 0 0 var(--gray1),
-                  70px 70px 0 0 var(--gray2),
-                  0px 100px 0 0 var(--gray3),
-                  -70px 70px 0 0 var(--gray4),
-                  -100px 0 0 0 var(--gray5),
-                  -70px -70px 0 0 var(--gray6);
-          }
-
-          25% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray6),
-                  70px -70px 0 0 var(--gray7),
-                  100px 0 0 0 var(--white),
-                  70px 70px 0 0 var(--gray1),
-                  0px 100px 0 0 var(--gray2),
-                  -70px 70px 0 0 var(--gray3),
-                  -100px 0 0 0 var(--gray4),
-                  -70px -70px 0 0 var(--gray5);
-          }
-          
-          37.5% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray5),
-                  70px -70px 0 0 var(--gray6),
-                  100px 0 0 0 var(--gray7),
-                  70px 70px 0 0 var(--white),
-                  0px 100px 0 0 var(--gray1),
-                  -70px 70px 0 0 var(--gray2),
-                  -100px 0 0 0 var(--gray3),
-                  -70px -70px 0 0 var(--gray4);
-          }
-          50% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray4),
-                  70px -70px 0 0 var(--gray5),
-                  100px 0 0 0 var(--gray6),
-                  70px 70px 0 0 var(--gray7),
-                  0px 100px 0 0 var(--white),
-                  -70px 70px 0 0 var(--gray1),
-                  -100px 0 0 0 var(--gray2),
-                  -70px -70px 0 0 var(--gray3);
-          }
-          
-          62.5% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray3),
-                  70px -70px 0 0 var(--gray4),
-                  100px 0 0 0 var(--gray5),
-                  70px 70px 0 0 var(--gray6),
-                  0px 100px 0 0 var(--gray7),
-                  -70px 70px 0 0 var(--white),
-                  -100px 0 0 0 var(--gray1),
-                  -70px -70px 0 0 var(--gray2);
-          }
-          75% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray2),
-                  70px -70px 0 0 var(--gray3),
-                  100px 0 0 0 var(--gray4),
-                  70px 70px 0 0 var(--gray5),
-                  0px 100px 0 0 var(--gray6),
-                  -70px 70px 0 0 var(--gray7),
-                  -100px 0 0 0 var(--white),
-                  -70px -70px 0 0 var(--gray1);
-          }
-          
-          87.5% {
-              box-shadow:
-                  0 -100px 0 0 var(--gray1),
-                  70px -70px 0 0 var(--gray2),
-                  100px 0 0 0 var(--gray3),
-                  70px 70px 0 0 var(--gray4),
-                  0px 100px 0 0 var(--gray5),
-                  -70px 70px 0 0 var(--gray6),
-                  -100px 0 0 0 var(--gray7),
-                  -70px -70px 0 0 var(--white);
-          }
-        }
+    @keyframes spin-circle {
+      0%,
+      100% {
+          box-shadow:
+              0 -100px 0 0 var(--white),
+              70px -70px 0 0 var(--gray1),
+              100px 0 0 0 var(--gray2), 
+              70px 70px 0 0 var(--gray3),
+              0px 100px 0 0 var(--gray4),
+              -70px 70px 0 0 var(--gray5),
+              -100px 0 0 0 var(--gray6),
+              -70px -70px 0 0 var(--gray7);
+      
+      12.5% {
+          box-shadow:
+              0 -100px 0 0 var(--gray7),
+              70px -70px 0 0 var(--white),
+              100px 0 0 0 var(--gray1),
+              70px 70px 0 0 var(--gray2),
+              0px 100px 0 0 var(--gray3),
+              -70px 70px 0 0 var(--gray4),
+              -100px 0 0 0 var(--gray5),
+              -70px -70px 0 0 var(--gray6);
+      
+      25% {
+          box-shadow:
+              0 -100px 0 0 var(--gray6),
+              70px -70px 0 0 var(--gray7),
+              100px 0 0 0 var(--white),
+              70px 70px 0 0 var(--gray1),
+              0px 100px 0 0 var(--gray2),
+              -70px 70px 0 0 var(--gray3),
+              -100px 0 0 0 var(--gray4),
+              -70px -70px 0 0 var(--gray5);
+      }
+      
+      37.5% {
+          box-shadow:
+              0 -100px 0 0 var(--gray5),
+              70px -70px 0 0 var(--gray6),
+              100px 0 0 0 var(--gray7),
+              70px 70px 0 0 var(--white),
+              0px 100px 0 0 var(--gray1),
+              -70px 70px 0 0 var(--gray2),
+              -100px 0 0 0 var(--gray3),
+              -70px -70px 0 0 var(--gray4);
+      }
+      50% {
+          box-shadow:
+              0 -100px 0 0 var(--gray4),
+              70px -70px 0 0 var(--gray5),
+              100px 0 0 0 var(--gray6),
+              70px 70px 0 0 var(--gray7),
+              0px 100px 0 0 var(--white),
+              -70px 70px 0 0 var(--gray1),
+              -100px 0 0 0 var(--gray2),
+              -70px -70px 0 0 var(--gray3);
+      }
+      
+      62.5% {
+          box-shadow:
+              0 -100px 0 0 var(--gray3),
+              70px -70px 0 0 var(--gray4),
+              100px 0 0 0 var(--gray5),
+              70px 70px 0 0 var(--gray6),
+              0px 100px 0 0 var(--gray7),
+              -70px 70px 0 0 var(--white),
+              -100px 0 0 0 var(--gray1),
+              -70px -70px 0 0 var(--gray2);
+      }
+      75% {
+          box-shadow:
+              0 -100px 0 0 var(--gray2),
+              70px -70px 0 0 var(--gray3),
+              100px 0 0 0 var(--gray4),
+              70px 70px 0 0 var(--gray5),
+              0px 100px 0 0 var(--gray6),
+              -70px 70px 0 0 var(--gray7),
+              -100px 0 0 0 var(--white),
+              -70px -70px 0 0 var(--gray1);
+      }
+      
+      87.5% {
+          box-shadow:
+              0 -100px 0 0 var(--gray1),
+              70px -70px 0 0 var(--gray2),
+              100px 0 0 0 var(--gray3),
+              70px 70px 0 0 var(--gray4),
+              0px 100px 0 0 var(--gray5),
+              -70px 70px 0 0 var(--gray6),
+              -100px 0 0 0 var(--gray7),
+              -70px -70px 0 0 var(--white);
+      }
+    }
 \`\`\`
 
 <br><br>
@@ -238,5 +236,3 @@ Add the animation to our div, and voila, we have a spinning spinner.
 [Here's a Fiddle with this example!](https://jsfiddle.net/nlemast/zrmevyug/23/)
 `,
 };
-
-export default post;
