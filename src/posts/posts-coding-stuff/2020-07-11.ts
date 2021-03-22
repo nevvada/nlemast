@@ -1,4 +1,4 @@
-const post = {
+export default {
   date: '2020-07-11',
   title: 'On Files and File Readers',
   markdown: `
@@ -22,9 +22,9 @@ An example would look like so:
 <br><br>
 
 \`\`\`js
-        const myFile = new File(['I am hungry.'], 'myBiography.txt', {
-          type: 'text/plain',
-        });
+    const myFile = new File(['I am hungry.'], 'myBiography.txt', {
+      type: 'text/plain',
+    });
 \`\`\`
 
 <br><br>
@@ -32,14 +32,14 @@ Logging out myFile will show an object with readonly properties like this:
 <br><br>
 
 \`\`\`js
-        {
-          lastModified: 1594486067967,
-          lastModifiedDate: Sat Jul 11 2020 12:47:47,
-          name: 'myBiography.txt',
-          size: 12,
-          type: 'text/plain',
-          webkitRelativePath: '',
-        }
+    {
+      lastModified: 1594486067967,
+      lastModifiedDate: Sat Jul 11 2020 12:47:47,
+      name: 'myBiography.txt',
+      size: 12,
+      type: 'text/plain',
+      webkitRelativePath: '',
+    }
 \`\`\`
 
 <br><br>
@@ -53,7 +53,7 @@ And the code in our HTML:
 <br><br>
 
 \`\`\`js
-        <input type="file" id="fileInput" />
+    <input type="file" id="fileInput" />
 \`\`\`
 
 <br><br>
@@ -61,11 +61,11 @@ And in our Javascript:
 <br><br>
 
 \`\`\`js
-        const input = document.querySelector('#fileInput');
+    const input = document.querySelector('#fileInput');
 
-        fileInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-        });
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+    });
 \`\`\`
 
 <br><br>
@@ -77,17 +77,17 @@ But a \`File\` is just that, a simple file. Its properties are readonly, and the
 <br><br>
 
 \`\`\`js
-        fileInput.addEventListener('change', (event) = {
-          const file = event.target.files[0];
-        
-          const fileReader = new FileReader();
-        
-          fileReader.readAsText(file);
-        
-          fileReader.onload = () => {
-              console.log(fileReader.result);
-          };
-        });
+    fileInput.addEventListener('change', (event) = {
+      const file = event.target.files[0];
+    
+      const fileReader = new FileReader();
+    
+      fileReader.readAsText(file);
+    
+      fileReader.onload = () => {
+          console.log(fileReader.result);
+      };
+    });
 \`\`\`
 
 <br><br>
@@ -95,28 +95,26 @@ This works great if it’s a \`.txt\` file, but what about images? For this, we 
 <br><br>
 
 \`\`\`js
-        fileInput.addEventListener('change', (event) = {
-          const file = event.target.files[0];
-        
-          const fileReader = new FileReader();
-        
-          fileReader.readAsDataURL(file);
-        
-          fileReader.onload = () => {
-              const dataURL = fileReader.result;
-          
-              const img = new Image();
-              img.src = dataURL;
-          
-              // div we add to our DOM
-              div.appendChild(img);
-          };
-        });
+    fileInput.addEventListener('change', (event) = {
+      const file = event.target.files[0];
+    
+      const fileReader = new FileReader();
+    
+      fileReader.readAsDataURL(file);
+    
+      fileReader.onload = () => {
+          const dataURL = fileReader.result;
+      
+          const img = new Image();
+          img.src = dataURL;
+      
+          // div we add to our DOM
+          div.appendChild(img);
+      };
+    });
 \`\`\`
 
 <br><br>
 [Here's a link to an example!](https://jsfiddle.net/nlemast/3t6zrkhf/10/)
 `,
 };
-
-export default post;
