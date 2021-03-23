@@ -15,7 +15,7 @@ export const StyledLi = styled.li`
   align-items: center;
   display: flex;
   font-size: 1.5em;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1em;
   transition: color 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
