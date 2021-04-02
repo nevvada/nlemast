@@ -5,7 +5,9 @@ const post = {
 At the East Asia Summit last Friday, Philippines President Rodrigo Duterte took the
 opportunity to shock an audience of world leaders with the infamous black and white photograph
 of the 1906 Bud Dajo Massacre, depicting American soldiers posing proudly in a volcano crater
-littered with hundreds of corpses.
+littered with hundreds of corpses (you can see the grisly photo [here](http://4.bp.blogspot.com/-oE1Xe0pOsyE/VqsWjQmFrhI/AAAAAAAAKNs/X7qzrZeq4C4/s1600/US%2Bsoldiers%2Bpose%2Bwith%2Bthe%2Bbodies%2Bof%2BMoro%2Binsurgents%252C%2BPhilippines%252C%2B1906.jpg)).
+
+<br>
 In the wake of the president’s extrajudicial killings that
 has seen the deaths of more than 2,000 drug offenders and pushers, contextualizing the
 massacre at Bud Dajo is essential to understanding Duterte’s vitriolic comments about
@@ -93,7 +95,7 @@ And while I’ll concede ignorance to to the reality of drug trafficking and add
 Manila’s streets, I will acknowledge that the proposed quick-fix solution of having 100,000
 bodies floating in Manila Bay by the end of Duterte first six months in office won’t end the
 problem of drugs, just as building a wall won’t prevent people south of the border from coming
-into the United States, or Syrian refugees flooding into Europe. Instead what Duterte needs to
+into the United States, or Syrian refugees entering Europe. Instead what Duterte needs to
 ask is: what are the motivations that push people into the world of drugs? A sense of feeling
 economically disenfranchised? A sense of futility towards fighting an extremely corrupt
 government? A lack of general welfare? Or is it something within the culture? These are the
