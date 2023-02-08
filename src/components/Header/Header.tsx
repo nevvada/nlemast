@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   return (
     <StyledHeader>
       <StyledH1>
-        <Link to={homePath}>nathan le master</Link>
+        <Link to={homePath}>nevada le master</Link>
       </StyledH1>
       <StyledH2>software engineer &middot; writer &middot; very online person</StyledH2>
       <hr />
