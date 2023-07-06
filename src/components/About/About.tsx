@@ -13,7 +13,7 @@ const About: React.FC = () => (
       <br />
       <br />
       You can find me on&nbsp;
-      <Anchor href="https://github.com/nlemast">Github</Anchor>
+      <Anchor href="https://github.com/nevvada">Github</Anchor>
       &nbsp;or&nbsp;
       <Anchor href="https://www.linkedin.com/in/nevada-le-master/">LinkedIn</Anchor>
       .
